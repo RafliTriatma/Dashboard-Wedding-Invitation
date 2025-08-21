@@ -37,7 +37,7 @@ const InvitationDashboard: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Split guest names by email symbol (✉) if multiple names
+      // Split guest names
       const guestNames = formData.guestName.split('⏎').map(name => name.trim()).filter(Boolean);
       
       for (const name of guestNames) {
@@ -70,12 +70,7 @@ const InvitationDashboard: React.FC = () => {
         invitationLink
       );
 
-      // In a real app, you'd get the phone number from guest data
-      // For demo purposes, we'll show the message
       alert(`WhatsApp message for ${guest.name}:\n\n${message}`);
-      
-      // Uncomment this line to actually send via WhatsApp
-      // sendWhatsAppMessage('', message);
       
     } catch (error) {
       console.error('Error sending WhatsApp:', error);
