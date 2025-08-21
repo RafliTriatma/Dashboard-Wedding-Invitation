@@ -1,5 +1,4 @@
 import React from 'react';
-// Define ButtonVariant and ButtonSize types locally
 export type ButtonVariant = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 

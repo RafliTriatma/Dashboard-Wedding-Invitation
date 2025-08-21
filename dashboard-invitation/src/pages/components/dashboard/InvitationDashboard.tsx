@@ -38,7 +38,7 @@ const InvitationDashboard: React.FC = () => {
     
     try {
       // Split guest names by email symbol (✉) if multiple names
-      const guestNames = formData.guestName.split('✉').map(name => name.trim()).filter(Boolean);
+      const guestNames = formData.guestName.split('⏎').map(name => name.trim()).filter(Boolean);
       
       for (const name of guestNames) {
         addGuest(name);
